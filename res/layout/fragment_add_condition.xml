@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:orientation="vertical"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<ScrollView android:id="@+id/ScrollView01"
+		android:layout_width="match_parent" android:layout_height="match_parent"
+		android:layout_weight="1">
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="match_parent" android:layout_height="match_parent">
+
+			<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+
+
+			<LinearLayout android:id="@+id/trailsContainer"
+				android:layout_width="match_parent" android:layout_height="wrap_content"
+				android:gravity="center_vertical">
+
+				<LinearLayout android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:layout_weight="1"
+					android:orientation="vertical" android:padding="10dp">
+					<TextView android:id="@+id/trailsTitle" android:text="Trails"
+						android:layout_alignParentTop="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" style="@android:style/TextAppearance.Large" />
+
+					<TextView android:id="@+id/trails" android:text="Tap to select trails."
+						android:layout_below="@id/trailsTitle"
+						android:layout_alignWithParentIfMissing="true"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						style="@android:style/TextAppearance.Small" />
+				</LinearLayout>
+
+				<!-- icon -->
+				<ImageView android:id="@+id/more" android:focusable="false"
+					android:layout_centerVertical="true" android:src="@drawable/whats_on_button"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:paddingLeft="@dimen/whats_on_button_right_padding"
+					android:paddingRight="@dimen/whats_on_button_right_padding">
+				</ImageView>
+
+			</LinearLayout>
+
+		<!-- 	<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+
+			<TextView android:text="@string/selectCondition"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_margin="10dp" style="@android:style/TextAppearance.Large" />
+
+			<Spinner android:id="@+id/conditionSpinner"
+				android:layout_height="wrap_content" android:layout_width="match_parent" /> -->
+
+			<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+				
+					<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+
+			<TextView android:text="@string/selectCondition"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_margin="10dp" style="@android:style/TextAppearance.Large" />
+
+			<include layout="@layout/trail_status_selector" />
+
+			<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+
+			<TextView android:text="@string/selectUserType"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_margin="10dp" style="@android:style/TextAppearance.Large" />
+
+			<Spinner android:id="@+id/userTypeSpinner"
+				android:layout_height="wrap_content" android:layout_width="match_parent" />
+
+
+			<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+
+
+
+			<EditText android:id="@+id/comment" android:layout_width="match_parent"
+				android:hint="@string/commentHint" android:imeOptions="actionDone"
+				android:layout_height="100dp" android:gravity="top"
+				android:layout_marginTop="5dp" android:layout_marginRight="10dp"
+				android:layout_marginLeft="10dp" />
+
+			<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+
+
+
+		</LinearLayout>
+
+
+
+	</ScrollView>
+
+	<LinearLayout android:id="@+id/confirmCancel"
+		android:layout_width="match_parent" android:layout_height="wrap_content"
+		android:gravity="bottom" android:orientation="horizontal">
+
+		<Button android:text="@string/submit" android:id="@+id/confirm"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_weight="1" />
+
+		<Button android:text="@string/cancel" android:id="@+id/cancel"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_weight="1" />
+
+
+
+	</LinearLayout>
+
+</LinearLayout>
+
+
+
+

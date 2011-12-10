@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<conditions>
+
+	<condition>
+		<id>1</id>
+		<trailId>highplains</trailId>
+		<type>0</type>
+		<nickname>Matt</nickname>
+		<status>Fair</status>
+		<userType>Biker</userType>
+		<comment>very nice indeed</comment>
+		<updatedAt>1304715507443</updatedAt>
+	</condition>
+
+	<condition>
+		<id>2</id>
+		<trailId>highplains</trailId>
+		<type>0</type>
+		<nickname>Matt</nickname>
+		<status>Poor</status>
+		<userType>Biker</userType>
+		<comment>yuck-a-mamma</comment>
+		<updatedAt>1304715507443</updatedAt>
+	</condition>
+	
+	<condition>
+		<id>3</id>
+		<trailId>coalseam</trailId>
+		<type>0</type>
+		<nickname>Matt</nickname>
+		<status>Poor</status>
+		<userType>Biker</userType>
+		<comment>yuck-a-mamma</comment>
+		<updatedAt>1304715507443</updatedAt>
+	</condition>
+
+</conditions>

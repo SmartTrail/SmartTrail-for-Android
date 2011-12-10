@@ -1,0 +1,99 @@
+<!-- Copyright 2011 Google Inc. Licensed under the Apache License, Version 
+	2.0 (the "License"); you may not use this file except in compliance with 
+	the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+	Unless required by applicable law or agreed to in writing, software distributed 
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+	the specific language governing permissions and limitations under the License. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+
+
+	<ScrollView android:layout_width="match_parent" android:id="@+id/scrollView1"
+		android:layout_height="match_parent">
+		<LinearLayout android:id="@+id/linearLayout1"
+			android:orientation="vertical" android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<TableLayout android:id="@+id/tableLayout1"
+				android:padding="10dp" android:layout_height="wrap_content"
+				android:layout_width="wrap_content">
+				<TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:text="Technical:" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_marginRight="10dp"
+						android:layout_marginBottom="2dp" style="@android:style/TextAppearance.Small" />
+					<RatingBar android:id="@+id/technicalRating"
+						android:layout_gravity="center_vertical" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" style="@style/coolBarStyleSmall" />
+
+					<!-- style="?android:attr/ratingBarStyleSmall" android:progressDrawable="@drawable/coolbar_small_green"-->
+				</TableRow>
+				
+				<TableRow android:id="@+id/tableRow2" android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:text="Aerobic:" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_marginRight="10dp"
+						android:layout_marginBottom="2dp" style="@android:style/TextAppearance.Small" />
+					<RatingBar android:id="@+id/aerobicRating"
+						android:layout_gravity="center_vertical" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" 
+						style="@style/coolBarStyleSmall" />
+
+				</TableRow>
+				
+				<TableRow android:id="@+id/tableRow3" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:layout_gravity="center_vertical">
+					<TextView android:text="Cool:" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_marginRight="10dp"
+						android:layout_marginBottom="2dp" style="@android:style/TextAppearance.Small" />
+
+					<RatingBar android:id="@+id/coolRating"
+						android:layout_gravity="center_vertical" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" style="@style/coolBarStyleSmall" />
+
+				</TableRow>
+
+			</TableLayout>
+
+			<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+
+			<LinearLayout android:id="@+id/overviewContainer"
+				android:orientation="vertical" android:layout_width="match_parent"
+				android:layout_height="match_parent" android:background="@drawable/whats_on_button"
+				android:paddingRight="@dimen/whats_on_button_right_padding"
+				android:padding="10dp">
+
+				<TextView android:id="@+id/descripTitle" android:text="@string/descriptionTitle"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					style="@android:style/TextAppearance.Medium" />
+
+				<TextView android:id="@+id/overview" android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:maxLines="4"
+					android:paddingRight="15dp" />
+			</LinearLayout>
+
+			<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+
+			<LinearLayout android:id="@+id/directionsContainer"
+				android:orientation="vertical" android:layout_width="match_parent"
+				android:layout_height="match_parent" android:background="@drawable/whats_on_button"
+				android:paddingRight="@dimen/whats_on_button_right_padding"
+				android:padding="10dp">
+				<TextView android:id="@+id/directionsTitle" android:text="@string/directionsTitle"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					style="@android:style/TextAppearance.Medium" />
+
+				<!-- <TextView android:layout_width="fill_parent" android:layout_height="fill_parent" 
+					android:text="Tap to get directions to trailhead." android:paddingRight="15dp" 
+					/> -->
+			</LinearLayout>
+
+			<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+		</LinearLayout>
+	</ScrollView>
+</FrameLayout>

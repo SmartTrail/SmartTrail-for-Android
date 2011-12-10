@@ -1,0 +1,46 @@
+<resources>
+
+	<string-array name="trailAreas">
+		<item>Betasso Preserve</item>
+		<item>Boulder Valley Ranch / Boulder Reservoir</item>
+		<item>Dot Trails</item>
+		<item>Doudy Draw</item>
+		<item>East Boulder</item>
+		<item>East Boulder County</item>
+		<item>Hall Ranch</item>
+		<item>Heil Valley Ranch</item>
+		<item>High Country</item>
+		<item>Marshall Mesa</item>
+		<item>Middle Country</item>
+		<item>Mud Lake</item>
+		<item>Rabbit Mountain</item>
+		<item>Valmont Bike Park</item>
+		<item>Walker Ranch</item>
+		<item>West Magnolia</item>
+	</string-array>
+
+
+	<string-array name="conditions">
+		<item>Good</item>
+		<item>Fair</item>
+		<item>Poor</item>
+	</string-array>
+
+	<string-array name="userTypes">
+		<item>Biker</item>
+		<item>Hiker</item>
+		<item>Horse rider</item>
+		<item>Runner</item>
+	</string-array>
+
+
+	<string-array name="addContentOptions">
+		<item>Add an area review...</item>
+		<item>Add trail conditions...</item>
+	</string-array>
+	<string-array name="addContentOptionsPatroller">
+		<item>Add an area review...</item>
+		<item>Add trail conditions...</item>
+		<item>Add a patrol report...</item>
+	</string-array>
+</resources>

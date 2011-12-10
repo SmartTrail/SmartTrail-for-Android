@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+<ScrollView android:id="@+id/ScrollView01"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent">
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="match_parent" android:layout_height="match_parent"
+		android:padding="10dp">
+
+		<TextView android:id="@+id/title" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge"
+			android:text="@string/description" android:paddingBottom="10dp" />
+
+		<TextView android:id="@+id/overview"  android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:textAppearance="?android:attr/textAppearanceSmall"
+			android:text="some kind of overview of the trail. alsdkj askdl .askld  asldk laskdj lkasdj lk asldk alksdj lask" />
+
+
+
+
+	</LinearLayout>
+
+
+</ScrollView>
+
+
+
+
+
+

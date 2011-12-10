@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="smarttrail">
+
+    <!-- The local.properties file is created and updated by the 'android' tool.
+         It contains the path to the SDK. It should *NOT* be checked in in Version
+         Control Systems. -->
+    <property file="local.properties" />
+
+    <!-- The build.properties file can be created by you and is never touched
+         by the 'android' tool. This is the place to change some of the default property values
+         used by the Ant rules.
+         Here are some properties you may want to change/update:
+
+         application.package
+             the name of your application package as defined in the manifest. Used by the
+             'uninstall' rule.
+         source.dir
+             the name of the source directory. Default is 'src'.
+         out.dir
+             the name of the output directory. Default is 'bin'.
+
+         Properties related to the SDK location or the project target should be updated
+          using the 'android' tool with the 'update' action.
+
+         This file is an integral part of the build system for your application and
+         should be checked in in Version Control Systems.
+
+         -->
+    <property file="../secure.properties" />
+    <property file="build.properties" />
+
+    <!-- The default.properties file is created and updated by the 'android' tool, as well
+         as ADT.
+         This file is an integral part of the build system for your application and
+         should be checked in in Version Control Systems. -->
+    <property file="default.properties" />
+
+    <!-- Custom Android task to deal with the project target, and import the proper rules.
+         This requires ant 1.6.0 or above. -->
+    <path id="android.antlibs">
+        <pathelement path="${sdk.dir}/tools/lib/anttasks.jar" />
+        <pathelement path="${sdk.dir}/tools/lib/sdklib.jar" />
+        <pathelement path="${sdk.dir}/tools/lib/androidprefs.jar" />
+        <pathelement path="${sdk.dir}/tools/lib/apkbuilder.jar" />
+        <pathelement path="${sdk.dir}/tools/lib/jarutils.jar" />
+    </path>
+
+
+	<!-- run the ant timestamp task -->
+	<tstamp>
+		<format property="VERSION_DATE" pattern="yyyy-MM-dd" locale="en" />
+	</tstamp>
+
+   <!-- Output directories -->
+    <property name="out.dir" value="bin" />
+    <property name="out.absolute.dir" location="${out.dir}" />
+ <property name="out.release.file.name"
+                  value="${ant.project.name}-beta-${DSTAMP}.apk" />
+    <property name="out.release.file"
+                  location="${out.absolute.dir}/${out.release.file.name}" />
+
+ <echo>Release file: ${out.release.file}...</echo>
+
+    <taskdef name="setup"
+        classname="com.android.ant.SetupTask"
+        classpathref="android.antlibs" /> 
+
+
+
+
+	<!--<property name="my.out.release.file.name" value="${ant.project.name}-beta-${DSTAMP}.apk" />
+	<property name="out.release.file" location="${out.absolute.dir}/${out.release.file.name}" />-->
+
+    <!-- Execute the Android Setup task that will setup some properties specific to the target,
+         and import the build rules files.
+
+         The rules file is imported from
+            <SDK>/platforms/<target_platform>/templates/android_rules.xml
+
+         To customize some build steps for your project:
+         - copy the content of the main node <project> from android_rules.xml
+         - paste it in this build.xml below the <setup /> task.
+         - disable the import by changing the setup task below to <setup import="false" />
+
+         This will ensure that the properties are setup correctly but that your customized
+         build steps are used.
+    -->
+    <setup />
+
+
+
+
+
+      <exec executable="hg" outputproperty="hg.rev">
+		<arg value="tip" />
+		<arg value="--template" />
+		<arg value="{rev}\n" />
+	</exec>
+
+	<exec executable="hg" outputproperty="hg.node">
+		<arg value="tip" />
+		<arg value="--template" />
+		<arg value="{node|short}\n" />
+	</exec>
+    
+    <!-- setup config settings before compile -->
+    <target name="-pre-compile" depends="config"/>
+    
+
+    
+    <!-- Config 
+    
+         Copy Config.java to our source tree, replacing custom tokens with values in build.properties. 
+         The configuration depends on "clean" because otherwise the build system will not detect changes 
+         in the configuration. 
+	-->
+	<target name="config">
+
+		<property name="config-target-path" value="${source.dir}/com/geozen/smarttrail/app" />
+
+		<!-- Copy the configuration file, replacing tokens in the file. -->
+		<copy file="templates/Config.java" todir="${config-target-path}" overwrite="true" encoding="utf-8">
+			<filterset>
+				<filter token="CONFIG.DEBUG" value="${config.debug}" />
+				<filter token="CONFIG.USE_DEBUG_SERVER" value="${config.use_debug_server}" />
+			</filterset>
+		</copy>
+
+		<!-- Now set it to read-only, as we don't want people accidentally
+       editing the wrong one. NOTE: This step is unnecessary, but I do
+       it so the developers remember that this is not the original file. -->
+		<!--<chmod file="${config-target-path}/Config.java" perm="-w" />
+		<attrib file="${config-target-path}/Config.java" readonly="true" />-->
+
+
+		<taskdef name="xmltask" classname="com.oopsconsultancy.xmltask.ant.XmlTask">
+
+			<classpath>
+				<fileset dir="ant">
+					<include name="*.jar" />
+				</fileset>
+			</classpath>
+		</taskdef>
+
+
+		<xmltask source="AndroidManifest.xml" dest="AndroidManifest.xml">
+			<replace path="/manifest/@android:versionName" withText="${VERSION_DATE}" />
+		</xmltask>
+		<xmltask source="AndroidManifest.xml" dest="AndroidManifest.xml">
+			<replace path="/manifest/@android:versionCode" withText="${hg.rev}" />
+			<replace path="/manifest/application/@android:debuggable" withText="false" />
+		</xmltask>
+		<xmltask source="res/values/styles.xml" dest="res/values/styles.xml">
+			<replace path="/resources/style/item[@name='android:apiKey']/text()" withText="@string/maps_api_key_release" />
+		</xmltask>
+		<xmltask source="res/values-xlarge-v11/styles.xml" dest="res/values-xlarge-v11/styles.xml">
+			<replace path="/resources/style/item[@name='android:apiKey']/text()" withText="@string/maps_api_key_release" />
+		</xmltask>
+		<xmltask source="res/values-xlarge-land-v11/styles.xml" dest="res/values-xlarge-land-v11/styles.xml">
+			<replace path="/resources/style/item[@name='android:apiKey']/text()" withText="@string/maps_api_key_release" />
+		</xmltask>
+
+	</target>
+    
+    
+       
+
+</project>

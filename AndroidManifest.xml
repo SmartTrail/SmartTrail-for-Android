@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto" android:versionCode="34" android:versionName="debug" package="com.geozen.smarttrail">
+
+	<uses-sdk android:minSdkVersion="7" android:targetSdkVersion="12"/>
+
+
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+	<application android:debuggable="true" android:hardwareAccelerated="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:logo="@drawable/title_logo" android:name=".app.SmartTrailApplication" android:theme="@style/Theme.SmartTrail">
+
+		<uses-library android:name="com.google.android.maps"/>
+
+		<provider android:authorities="com.geozen.smarttrail" android:name=".provider.SmartTrailProvider"/>
+
+		<activity android:label="@string/app_name" android:name=".ui.HomeActivity" android:theme="@style/Theme.SmartTrail.Home">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+
+		<activity android:label="@string/title_alerts" android:name=".ui.AlertsActivity"/>
+		<activity android:label="@string/title_patrol" android:name=".ui.PatrolActivity"/>
+
+		<activity android:label="@string/title_events" android:name=".ui.EventsActivity"/>
+
+		<activity android:label="@string/title_event" android:name=".ui.EventActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+				<data android:mimeType="vnd.android.cursor.dir/vnd.geozen.smarttrail.event"/>
+			</intent-filter>
+		</activity>
+
+		<activity android:label="@string/title_tagstream" android:name=".ui.TagStreamActivity"/>
+
+		<activity android:label="@string/title_starred" android:name=".ui.FavoritesActivity"/>
+
+		<activity android:label="@string/title_search" android:launchMode="singleTop" android:name=".ui.SearchActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.SEARCH"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+			<meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
+		</activity>
+
+
+		<activity android:label="@string/title_map" android:launchMode="singleTask" android:name=".ui.TrailMapActivity"/>
+
+		<activity android:name=".ui.RegionsActivity"/>
+
+		<!-- Phone-only activities -->
+		<activity android:label="@string/title_areas" android:name=".ui.phone.AreasActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+				<data android:mimeType="vnd.android.cursor.dir/vnd.geozen.smarttrail.area"/>
+			</intent-filter>
+		</activity>
+
+		<activity android:label="@string/title_trails" android:name=".ui.phone.TrailsActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+				<category android:name="android.intent.category.TAB"/>
+				<data android:mimeType="vnd.android.cursor.dir/vnd.geozen.smarttrail.trail"/>
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".ui.phone.TrailDetailActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+				<data android:mimeType="vnd.android.cursor.item/vnd.geozen.smarttrail.trail"/>
+			</intent-filter>
+		</activity>
+		<activity android:name=".ui.phone.AreaDetailActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+				<data android:mimeType="vnd.android.cursor.item/vnd.geozen.smarttrail.area"/>
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".ui.phone.ReviewDetailActivity">
+
+		</activity>
+
+
+
+
+
+		<activity android:configChanges="orientation|keyboardHidden" android:label="@string/title_map" android:name=".ui.phone.MapActivity"/>
+
+
+
+		<activity android:launchMode="singleInstance" android:name=".ui.SigninActivity" android:windowSoftInputMode="stateHidden"/>
+
+		<activity android:launchMode="singleInstance" android:name=".ui.SignupActivity" android:windowSoftInputMode="stateHidden"/>
+
+
+		<!-- Tablet-only activities -->
+
+		<activity android:label="@string/title_trails" android:name=".ui.tablet.TrailsMultiPaneActivity"/>
+		<activity android:label="@string/title_areas" android:name=".ui.tablet.AreasMultiPaneActivity"/>
+
+		<activity android:label="@string/title_schedule" android:name=".ui.tablet.ScheduleMultiPaneActivity"/>
+		<activity android:configChanges="orientation|keyboardHidden" android:label="@string/title_map" android:name=".ui.tablet.MapMultiPaneActivity"/>
+		<activity android:label="@string/title_now_playing" android:name=".ui.tablet.NowPlayingMultiPaneActivity"/>
+
+		<!-- Used for install referrer tracking -->
+		<receiver android:exported="true" android:name="com.google.android.apps.analytics.AnalyticsReceiver">
+			<intent-filter>
+				<action android:name="com.android.vending.INSTALL_REFERRER"/>
+			</intent-filter>
+		</receiver>
+
+		<!-- Other manifest items -->
+
+		<meta-data android:name="android.app.default_searchable" android:value=".ui.SearchActivity"/>
+
+		<service android:name=".service.SyncService"/>
+
+	</application>
+</manifest>

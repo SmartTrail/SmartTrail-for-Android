@@ -1,0 +1,100 @@
+
+
+<TableLayout android:id="@+id/tableLayout1"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:padding="10dp" android:layout_height="match_parent" 
+	android:layout_width="match_parent">
+	
+	<TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="match_parent" android:layout_height="wrap_content"
+			android:layout_weight="1" >
+
+			<ImageButton android:id="@+id/home_btn_trails"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:background="@drawable/home_btn_trails"
+				android:layout_gravity="center" />
+
+			<TextView android:id="@+id/home_btn_trails_label" android:text="@string/btn_trails"
+				android:layout_gravity="center" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" style="@android:style/TextAppearance.Small" />
+		</LinearLayout>
+
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="match_parent" android:layout_height="wrap_content"
+			android:layout_weight="1">
+
+			<ImageButton android:id="@+id/home_btn_map"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:background="@drawable/home_btn_map" android:layout_gravity="center" />
+
+			<TextView android:id="@+id/home_btn_map_label" android:text="@string/btn_map"
+				android:layout_gravity="center" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" style="@android:style/TextAppearance.Small" />
+		</LinearLayout>
+	</TableRow>
+
+	<TableRow android:id="@+id/tableRow2" android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="match_parent" android:layout_height="wrap_content"
+			android:layout_weight="1">
+
+			<ImageButton android:id="@+id/home_btn_starred"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:background="@drawable/home_btn_starred"
+				android:layout_gravity="center" />
+
+			<TextView android:id="@+id/home_btn_starred_label" android:text="@string/btn_starred"
+				android:layout_gravity="center" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" style="@android:style/TextAppearance.Small" />
+		</LinearLayout>
+
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="match_parent" android:layout_height="wrap_content"
+			android:layout_weight="1">
+
+			<ImageButton android:id="@+id/home_btn_announcements"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:background="@drawable/home_btn_alerts"
+				android:layout_gravity="center" />
+
+			<TextView android:id="@+id/home_btn_announcements_label" android:text="@string/btn_alerts"
+				android:layout_gravity="center" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" style="@android:style/TextAppearance.Small" />
+		</LinearLayout>
+	</TableRow>
+	
+	<TableRow android:id="@+id/tableRow3" android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="match_parent" android:layout_height="wrap_content"
+			android:layout_weight="1">
+
+			<ImageButton android:id="@+id/home_btn_events"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:background="@drawable/home_btn_events"
+				android:layout_gravity="center" />
+
+			<TextView android:id="@+id/home_btn_events_label" android:text="@string/btn_events"
+				android:layout_gravity="center" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" style="@android:style/TextAppearance.Small" />
+		</LinearLayout>
+
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="match_parent" android:layout_height="wrap_content"
+			android:layout_weight="1">
+
+			<ImageButton android:id="@+id/home_btn_patrol"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:background="@drawable/home_btn_patrol"
+				android:layout_gravity="center" />
+
+			<TextView android:id="@+id/home_btn_patrol_label" android:text="@string/btn_patrol"
+				android:layout_gravity="center" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" style="@android:style/TextAppearance.Small" />
+		</LinearLayout>
+	</TableRow>
+
+</TableLayout>

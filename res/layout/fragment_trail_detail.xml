@@ -1,0 +1,65 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout android:id="@+id/header_trail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/body_padding_large"
+        android:paddingRight="@dimen/body_padding_large"
+        android:paddingTop="@dimen/body_padding_medium"
+        android:paddingBottom="@dimen/body_padding_medium">
+
+        <CheckBox android:id="@+id/star_button"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/star_button_padding"
+            android:layout_marginLeft="@dimen/star_button_padding"
+            android:focusable="false"
+            android:clickable="false"
+            android:contentDescription="@string/description_star"
+            android:button="@drawable/btn_star" />
+
+        <TextView android:id="@+id/trail_title"
+            android:layout_toLeftOf="@id/star_button"
+            android:layout_alignParentLeft="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextHeader" />
+
+        <TextView android:id="@+id/trail_subtitle"
+            android:layout_below="@id/trail_title"
+            android:layout_toLeftOf="@id/star_button"
+            android:layout_alignParentLeft="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+           
+            style="@style/TrailTextHeaderSub" />
+    </RelativeLayout>
+
+    <TabHost android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TabWidget android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tab_off_background" />
+            <FrameLayout android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <include android:id="@+id/tab_trail_info"
+                    layout="@layout/tab_trail_info" />
+                <include android:id="@+id/tab_trail_conditions" layout="@layout/tab_trail_conditions" />
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

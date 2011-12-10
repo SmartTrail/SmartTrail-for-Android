@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:gravity="center">
+
+	<!-- HEADER android:background="@color/brand" <include layout="@layout/header_brand" 
+		/> -->
+
+	<EditText android:id="@+id/username" android:hint="@string/emailHint"
+		android:inputType="textEmailAddress" android:imeOptions="actionNext"
+		android:layout_height="wrap_content" android:layout_width="300dp"
+		android:layout_marginTop="10dp" android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp" android:layout_marginBottom="10dp"
+		android:maxWidth="250dp" />
+		
+	<EditText android:id="@+id/nickname" android:hint="@string/nicknameHint"
+		android:inputType="text" android:imeOptions="actionNext"
+		android:layout_height="wrap_content" android:layout_width="300dp"
+		android:layout_marginTop="10dp" android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp" android:layout_marginBottom="10dp"
+		android:maxWidth="250dp" />
+
+	<RelativeLayout android:layout_width="300dp"
+		android:layout_height="wrap_content" android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp">
+
+		<EditText android:id="@+id/password" android:inputType="textPassword"
+			android:imeOptions="actionDone" android:password="true"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:hint="@string/passwordHint" android:layout_alignParentLeft="true" />
+
+		<ImageButton android:id="@+id/showPassword" android:src="@android:drawable/ic_menu_view"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:layout_marginRight="5dp" android:layout_alignParentRight="true"
+			android:layout_centerVertical="true" android:background="@null" />
+		<!-- <CheckBox android:id="@+id/showPassword" android:layout_height="wrap_content" 
+			android:layout_width="wrap_content" android:layout_alignParentRight="true" 
+			android:layout_centerVertical="true" /> -->
+	</RelativeLayout>
+
+	<Button android:id="@+id/signIn" android:text="@string/signIn"
+		android:minWidth="200dp" android:layout_height="wrap_content"
+		android:layout_width="wrap_content" android:layout_marginTop="20dp" />
+
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:layout_marginTop="20dp">
+		<TextView android:id="@+id/notMember" android:text="@string/notMember"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical" />
+		<Button android:id="@+id/signUp" android:text="@string/signInLink"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_marginLeft="10dp" android:background="@null"
+			style="@style/SignupLinkTextAppearance" />
+	</LinearLayout>
+</LinearLayout>
+

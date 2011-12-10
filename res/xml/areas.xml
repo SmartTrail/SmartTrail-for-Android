@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<areas>
+
+	<area>
+		<regionId>boulder</regionId>
+		<id>4de6d929a8a32cc7f387f52b</id>
+		<name>Marshall Mesa</name>
+		<url>http://bouldermountainbike.org/area/marshall-mesa</url>
+		<icon></icon>
+		<description> South trails.
+		</description>
+		<color>#00658A</color>
+	</area>
+
+
+
+
+</areas>

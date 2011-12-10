@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:orientation="vertical"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<ScrollView android:id="@+id/ScrollView01"
+		android:layout_width="match_parent" android:layout_height="match_parent"
+		android:layout_weight="1">
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="match_parent" android:layout_height="match_parent">
+
+			<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+			<LinearLayout android:id="@+id/dateContainer"
+				android:layout_width="match_parent" android:layout_height="wrap_content"
+				android:gravity="center_vertical">
+
+				<LinearLayout android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:layout_weight="1"
+					android:orientation="vertical" android:padding="10dp">
+					<TextView android:id="@+id/dateTitle" android:text="Date"
+						android:layout_alignParentTop="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" style="@android:style/TextAppearance.Large" />
+
+					<TextView android:id="@+id/date" 
+						android:layout_below="@id/dateTitle"
+						android:layout_alignWithParentIfMissing="true"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						style="@android:style/TextAppearance.Small" />
+				</LinearLayout>
+
+				<!-- icon -->
+				<ImageView android:id="@+id/more" android:focusable="false"
+					android:layout_centerVertical="true" android:src="@drawable/whats_on_button"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:paddingLeft="@dimen/whats_on_button_right_padding"
+					android:paddingRight="@dimen/whats_on_button_right_padding">
+				</ImageView>
+
+			</LinearLayout>
+			<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+
+			<LinearLayout android:id="@+id/startTimeContainer"
+				android:layout_width="match_parent" android:layout_height="wrap_content"
+				android:gravity="center_vertical">
+
+				<LinearLayout android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:layout_weight="1"
+					android:orientation="vertical" android:padding="10dp">
+					<TextView android:id="@+id/startTimeTitle" android:text="Start Time"
+						android:layout_alignParentTop="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" style="@android:style/TextAppearance.Large" />
+
+					<TextView android:id="@+id/startTime" 
+						android:layout_below="@id/startTimeTitle"
+						android:layout_alignWithParentIfMissing="true"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						style="@android:style/TextAppearance.Small" />
+				</LinearLayout>
+
+				<!-- icon -->
+				<ImageView android:id="@+id/more" android:focusable="false"
+					android:layout_centerVertical="true" android:src="@drawable/whats_on_button"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:paddingLeft="@dimen/whats_on_button_right_padding"
+					android:paddingRight="@dimen/whats_on_button_right_padding">
+				</ImageView>
+
+			</LinearLayout>
+
+			<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+
+			<LinearLayout android:id="@+id/trailsContainer"
+				android:layout_width="match_parent" android:layout_height="wrap_content"
+				android:gravity="center_vertical">
+
+				<LinearLayout android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:layout_weight="1"
+					android:orientation="vertical" android:padding="10dp">
+					<TextView android:id="@+id/trailsTitle" android:text="Trails"
+						android:layout_alignParentTop="true" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" style="@android:style/TextAppearance.Large" />
+
+					<TextView android:id="@+id/trails" android:text="Tap to select trails."
+						android:layout_below="@id/trailsTitle"
+						android:layout_alignWithParentIfMissing="true"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						style="@android:style/TextAppearance.Small" />
+				</LinearLayout>
+
+				<!-- icon -->
+				<ImageView android:id="@+id/more" android:focusable="false"
+					android:layout_centerVertical="true" android:src="@drawable/whats_on_button"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_alignParentRight="true"
+					android:paddingLeft="@dimen/whats_on_button_right_padding"
+					android:paddingRight="@dimen/whats_on_button_right_padding">
+				</ImageView>
+
+			</LinearLayout>
+
+			<!-- <View android:layout_width="match_parent" android:layout_height="1dp" 
+				android:background="?android:attr/listDivider" /> <TextView android:text="@string/selectCondition" 
+				android:layout_width="wrap_content" android:layout_height="wrap_content" 
+				android:layout_margin="10dp" style="@android:style/TextAppearance.Large" 
+				/> <Spinner android:id="@+id/conditionSpinner" android:layout_height="wrap_content" 
+				android:layout_width="match_parent" /> -->
+
+
+
+			<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+
+			<TextView android:text="@string/selectCondition"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_margin="10dp" style="@android:style/TextAppearance.Large" />
+
+			<include layout="@layout/trail_status_selector" />
+
+			<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+				
+	<TextView android:text="@string/trailUsersSeen"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_margin="10dp" style="@android:style/TextAppearance.Large" />
+
+
+			<TableLayout android:id="@+id/tableLayout1"
+				android:layout_height="match_parent" android:layout_width="wrap_content">
+				
+				<TableRow android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:text="@string/numberOfBikers" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_margin="10dp"
+						style="@android:style/TextAppearance.Small" />
+					<EditText android:layout_height="wrap_content" android:id="@+id/numBikers"
+						android:layout_width="50dp" android:inputType="number" />
+				</TableRow>
+				
+				<TableRow  android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:text="@string/numberOfHikers"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:layout_margin="10dp" style="@android:style/TextAppearance.Small" />
+					<EditText android:layout_height="wrap_content" android:id="@+id/numHikers"
+						android:layout_width="50dp" android:inputType="number" />
+				</TableRow>
+				
+				
+				<TableRow  android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:text="@string/numberOfDogsUnleashed" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_margin="10dp"
+						style="@android:style/TextAppearance.Small" />
+					<EditText android:layout_height="wrap_content" android:id="@+id/numDogsUnleashed"
+						android:layout_width="50dp" android:inputType="number" />
+				</TableRow>
+				
+					<TableRow android:id="@+id/tableRow6" android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:text="@string/numberOfDogsLeashed" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_margin="10dp"
+						style="@android:style/TextAppearance.Small" />
+					<EditText android:layout_height="wrap_content" android:id="@+id/numDogsLeashed"
+						android:layout_width="50dp" android:inputType="number" />
+				</TableRow>
+				
+				
+				
+				<TableRow android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:text="@string/numberOfRunners" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_margin="10dp"
+						style="@android:style/TextAppearance.Small" />
+					<EditText android:layout_height="wrap_content" android:id="@+id/numRunners"
+						android:layout_width="50dp" android:inputType="number" />
+				</TableRow>
+				
+			
+				<TableRow  android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:text="@string/numberOfEquestrians"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:layout_margin="10dp" style="@android:style/TextAppearance.Small" />
+					<EditText android:layout_height="wrap_content" android:id="@+id/numHorseRiders"
+						android:layout_width="50dp" android:inputType="number" />
+				</TableRow>
+				
+				<TableRow android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:text="@string/numberOfAnglers" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_margin="10dp"
+						style="@android:style/TextAppearance.Small" />
+					<EditText android:layout_height="wrap_content" android:id="@+id/numAnglers"
+						android:layout_width="50dp" android:inputType="number" />
+				</TableRow>
+			</TableLayout>
+
+
+
+
+			<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+			<TextView android:text="@string/servicesRendered"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_margin="10dp" style="@android:style/TextAppearance.Large" />
+
+
+			<TableLayout android:id="@+id/tableLayout1"
+				android:layout_height="match_parent" android:layout_width="wrap_content">
+				<TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:text="Education/Contacts:"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:layout_margin="10dp" style="@android:style/TextAppearance.Small" />
+					<EditText android:layout_height="wrap_content" android:id="@+id/editText1"
+						android:layout_width="50dp" android:inputType="number" />
+
+
+				</TableRow>
+				<TableRow android:id="@+id/tableRow2" android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:text="Directions/Map:"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:layout_margin="10dp" style="@android:style/TextAppearance.Small" />
+					<EditText android:layout_height="wrap_content" android:id="@+id/editText1"
+						android:layout_width="50dp" android:inputType="number" />
+
+				</TableRow>
+				<TableRow android:id="@+id/tableRow3" android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:text="Mechanical:" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_margin="10dp"
+						style="@android:style/TextAppearance.Small" />
+					<EditText android:layout_height="wrap_content" android:id="@+id/editText1"
+						android:layout_width="50dp" android:inputType="number" />
+				</TableRow>
+				<TableRow android:id="@+id/tableRow4" android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:text="First Aid:" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_margin="10dp"
+						style="@android:style/TextAppearance.Small" />
+					<EditText android:layout_height="wrap_content" android:id="@+id/editText1"
+						android:layout_width="50dp" android:inputType="number" />
+				</TableRow>
+				<TableRow android:id="@+id/tableRow5" android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:text="Theft:" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_margin="10dp"
+						style="@android:style/TextAppearance.Small" />
+					<EditText android:layout_height="wrap_content" android:id="@+id/editText5"
+						android:layout_width="50dp" android:inputType="number" />
+				</TableRow>
+			</TableLayout>
+
+
+
+
+			<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+
+			<EditText android:id="@+id/comment" android:layout_width="match_parent"
+				android:hint="@string/commentHint" android:imeOptions="actionDone"
+				android:layout_height="100dp" android:gravity="top"
+				android:layout_marginTop="5dp" android:layout_marginRight="10dp"
+				android:layout_marginLeft="10dp" />
+
+			<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+
+			<EditText android:id="@+id/concerns" android:layout_width="match_parent"
+				android:hint="@string/commentHint" android:imeOptions="actionDone"
+				android:layout_height="100dp" android:gravity="top"
+				android:layout_marginTop="5dp" android:layout_marginRight="10dp"
+				android:layout_marginLeft="10dp" />
+
+			<View android:layout_width="match_parent" android:layout_height="1dp"
+				android:background="?android:attr/listDivider" />
+
+		</LinearLayout>
+
+
+
+	</ScrollView>
+
+	<LinearLayout android:id="@+id/confirmCancel"
+		android:layout_width="match_parent" android:layout_height="wrap_content"
+		android:gravity="bottom" android:orientation="horizontal">
+
+		<Button android:text="@string/submit" android:id="@+id/confirm"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_weight="1" />
+			
+		<Button android:text="@string/save" android:id="@+id/save"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_weight="1" />
+
+		<Button android:text="@string/cancel" android:id="@+id/cancel"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_weight="1" />
+
+
+
+	</LinearLayout>
+
+</LinearLayout>
+
+
+
+

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<string name="app_name">SmartTrail</string>
+
+	<string name="maps_api_key_debug">0TZFLZQK2rI9XksKNr33kvJF5XjpdU5d-wO5MCA</string>
+	<string name="maps_api_key_release"></string>
+
+
+	<!-- Main -->
+	<string name="trailSelect">Select Trail</string>
+	<string name="signout">Sign out</string>
+	<string name="signedOut">You have been signed out.</string>
+	<string name="setRegion">Set Region</string>
+
+	<!-- Map -->
+	<string name="map">Map</string>
+	<string name="myLocation">My Location</string>
+	<string name="loadingTrails">Loading trails...</string>
+
+	<!-- Info -->
+	<string name="info">Info</string>
+
+	<!-- Reviews -->
+	<string name="reviews">reviews</string>
+	<string name="reviewsTitle">Reviews</string>
+
+	<!-- Conditions -->
+	<string name="conditions">Conditions</string>
+	<string name="emptyConditionList">There has not been a trail update in the last 5 days, so the conditions are unknown. Please check the weather and use your best judgement. \n\n If you do ride, please update the trail conditions for your fellow trail users.</string>
+	<string name="addCondition">Add</string>
+	<string name="sync">Refresh</string>
+	<string name="syncing">Refreshing conditions...</string>
+	<string name="syncFailed">Refresh failed</string>
+
+	<!-- Trail Select -->
+	<string name="selectAreasTitle">Select Area</string>
+	<string name="selectArea">Select the trail area:</string>
+	<string name="selectTrail">Select the trail:</string>
+
+	<string name="eula_title">SmartTrail License Agreement</string>
+
+	<!-- Elevation -->
+	<string name="elevation">Elevation</string>
+
+	<!-- Me -->
+	<string name="me">Me</string>
+
+	<!-- Help -->
+	<string name="help">Help</string>
+
+	<!-- Condition State -->
+	<string name="good">GOOD</string>
+	<string name="fair">FAIR</string>
+	<string name="poor">POOR</string>
+	<string name="closed">CLOSED</string>
+
+	<!-- Signin -->
+	<string name="signIn">Sign in</string>
+	<string name="signInLink"><u>Sign in</u></string>
+	<string name="createAccount">Join!</string>
+	<string name="login_dialog_message">Please wait while we sign you in...
+	</string>
+	<string name="login_dialog_title">Signing in...</string>
+	<string name="login_failed_login_toast">Unable to sign in. Please check your username
+		and password.</string>
+	<string name="login_get_started">Get Started</string>
+
+
+	<string name="login_label">Sign in</string>
+	<string name="login_welcome_toast">Welcome to Smart Trail!</string>
+	<string name="usernameHint">Email or Username</string>
+	<string name="emailHint">Email</string>
+	<string name="passwordHint">Password</string>
+	<string name="menuStopZengine">Stop Zengine</string>
+	<string name="showPassword">Show password.</string>
+	<string name="alreadyMember">Already a member?</string>
+
+	<!-- Sign up -->
+	<string name="nicknameHint">Username</string>
+	<string name="createPasswordHint">Password (6+ chars)</string>
+
+	<string name="joinProgressMessage">Creating account...
+	</string>
+	<string name="joinProgressTitle">Signing you up...</string>
+	<string name="invalidPassword">Password is too short.</string>
+	<string name="shortPassword">Password is too short.</string>
+	<string name="invalidEmail">Email is invalid.</string>
+	<string name="signupUnsuccessful">Bummer! We could not create your account at this
+		time. Sorry about that. Verify that you email is unique and try again.
+	</string>
+	<string name="signUp">Sign up</string>
+	<string name="signUpLink"><u>Sign up</u></string>
+	<string name="notMember">Not a member?</string>
+
+	<!-- Add Condition -->
+	<string name="addConditionTitle">Add Trail Condition</string>
+	<string name="submittingCondition">Submitting...</string>
+	<string name="submit">Submit</string>
+	<string name="confirm">Done</string>
+	<string name="revert">Revert</string>
+	<string name="cancel">Cancel</string>
+	<string name="save">Save</string>
+	
+	<string name="ok">OK</string>
+	<string name="enable">Enable</string>
+	<string name="disable">Disable</string>
+
+	<string name="selectCondition">How are the trails?</string>
+	<string name="selectUserType">You are a:</string>
+	<string name="comment">Comment:</string>
+	<string name="commentHint">Enter comment...</string>
+	<string name="connectToNetwork">You need a network connection to continue.</string>
+	<string name="selectTrailsTitle">Select Trails</string>
+
+
+ 	<string name="description">Description</string>
+ 	<string name="noDescription">No description available yet.</string>
+
+
+	
+	<string name="description_home">Home</string>
+	<string name="description_search">Search</string>
+	<string name="description_map">Map</string>
+	<string name="description_refresh">Refresh</string>
+	<string name="description_share">Share</string>
+	<string name="description_export">Export</string>
+	<string name="description_star">Star</string>
+	<string name="description_now">Go to Now</string> 
+	<string name="description_logo">logo</string> 
+
+	<string name="title_now_playing">Now Playing</string>
+	<string name="title_schedule">Schedule</string>
+	<string name="title_trails">Trails</string>
+	<string name="title_trail_detail">Trail Information</string>
+	<string name="title_starred">Favorites</string>
+	<string name="title_areas">Trail Areas</string>
+	<string name="title_map">Map</string>
+	<string name="title_tagstream">Realtime Stream</string>
+	<string name="title_alerts">Alerts</string>
+	<string name="title_event">Event</string>
+	<string name="title_events">Events</string>
+	<string name="title_patrol">Patrol</string>
+
+	<string name="title_trail_areas">Trail Areas</string>
+
+	<string name="title_share">Share using</string>
+
+	<string name="title_search">Search</string>
+	<string name="title_search_query">
+		Search for \'
+		<xliff:g id="query">%1$s</xliff:g>
+		\'
+	</string>
+
+	<string name="btn_map">Map</string>
+	<string name="btn_trails">Trails</string>
+	<string name="btn_starred">Favorites</string>
+	<string name="btn_patrol">Patrol</string>
+	<string name="btn_alerts">Alerts</string>
+	<string name="btn_events">Events</string>
+	<string name="btn_valmont">Valmont</string>
+
+	<string name="toast_sync_error">
+		Sync error:
+		<xliff:g id="error">%1$s</xliff:g>
+	</string>
+
+	<string name="trail_subtitle">
+		<xliff:g id="time">%1$s</xliff:g>
+		in
+		<xliff:g id="room">%2$s</xliff:g>
+	</string>
+	<string name="trail_moderator_status">
+		<xliff:g id="questions">%1$s</xliff:g>
+		questions submitted and
+		<xliff:g id="votes">%2$s</xliff:g>
+		votes cast.
+	</string>
+
+	<string name="all_sandbox_title">All companies</string>
+	<string name="all_sandbox_subtitle">Tap to filter by sandbox companies by pod.</string>
+
+	<string name="all_trails_title">All trails</string>
+	<string name="all_trails_subtitle">Tap to filter trails by area.</string>
+
+	<string name="empty_areas">No areas found</string>
+	<string name="empty_trails">No trails found</string>
+	<string name="empty_trail_detail">No trail details found</string>
+	<string name="empty_vendors">No sandbox results found</string>
+	<string name="empty_search">No search results found</string>
+	<string name="empty_links">No links available</string>
+
+	<string name="trail_info">Info</string>
+	<string name="trail_conditions">Conditions</string>
+	<string name="trail_links">Links</string>
+	<string name="trail_requirements">Requirements</string>
+	<string name="trail_speakers">Speakers</string>
+
+	<string name="tag_stream">Realtime stream for</string>
+
+	<string name="trail_link_main">Web link</string>
+	<string name="trail_link_moderator">Ask questions</string>
+	<string name="trail_link_youtube">YouTube video</string>
+	<string name="trail_link_pdf">Slides (PDF)</string>
+	<string name="trail_link_feedback">Feedback on this trail</string>
+	<string name="trail_link_notes">Official notes</string>
+
+	<string name="search_trails">Trails</string>
+
+	<string name="starred_trails">Trails</string>
+	<string name="starred_areas">Areas</string>
+
+	<string name="search_label">Google I/O</string>
+	<string name="search_hint">Trail keywords</string>
+
+	<string name="share_template">
+		Checking out \'
+		<xliff:g id="title">%1$s</xliff:g>
+		\' at
+		<xliff:g id="hashtags">%2$s</xliff:g>
+		<xliff:g id="url">%3$s</xliff:g>
+	</string>
+
+	<string name="moderator_header">Moderator</string>
+
+	<string name="dialog_moderator_title">Google Moderator</string>
+	<string name="dialog_moderator_message">The official Google Moderator app is available in
+		Market, would you like to install it or continue using a normal
+		browser?</string>
+
+	<string name="dialog_moderator_web">Use Browser</string>
+	<string name="dialog_moderator_market">Visit Market</string>
+
+	<plurals name="whats_on_countdown_title">
+		<item quantity="zero">
+			<xliff:g id="remaining_time">%2$s</xliff:g>
+		</item>
+		<item quantity="one">
+			<xliff:g id="number_of_days">%1$s</xliff:g>
+			day,
+			<xliff:g id="remaining_time">%2$s</xliff:g>
+		</item>
+		<item quantity="other">
+			<xliff:g id="number_of_days">%1$s</xliff:g>
+			days,
+			<xliff:g id="remaining_time">%2$s</xliff:g>
+		</item>
+	</plurals>
+
+	<string name="whats_on_stream_title">Realtime\nStream</string>
+	<string name="whats_on_now_playing_title">Now Playing</string>
+	<string name="whats_on_thank_you_title">Keep it single!</string>
+
+	<string name="permission_write">Modify Google I/O schedule data</string>
+
+	<string name="toast_now_not_visible">Press this button during Google I/O to show the
+		current time.</string>
+
+	<!-- Notes integration -->
+	<string name="notes_catch_powered_by">
+		Notes are powered by
+		<a href="http://www.catch.com/">Catch.com</a>
+		.
+	</string>
+	<string name="notes_catch_market_title">Install Catch Notes</string>
+	<string name="notes_catch_market_subtitle">You can take notes for trails using the latest
+		version of Catch Notes, available from Android Market.</string>
+	<string name="notes_catch_new_title">Create a new note</string>
+	<string name="notes_catch_view_title">View area notes</string>
+	<string name="toast_notes_error_invoking">Error invoking Catch Notes.</string>
+
+	<string name="note_template">
+		Trail:
+		<xliff:g id="title">%1$s</xliff:g>
+		\n\n\n\n__________\nTags:
+		<xliff:g id="hashtags">%2$s</xliff:g>
+	</string>
+
+	
+	<string name="accept">Accept</string>
+	<string name="decline">Decline</string>
+
+	<!-- Patrol -->
+	<string name="patrollersOnly">Sorry you have to be a registered patroller to proceed.</string>
+	<string name="servicesRendered">Services Rendered</string>
+	<string name="numberOfBikers">Number of bikers:</string>
+	<string name="numberOfHikers">Number of hikers:</string>
+	<string name="numberOfRunners">Number of runners:</string>
+	<string name="numberOfDogsLeashed">Number of dogs (leashed):</string>
+	<string name="numberOfDogsUnleashed">Number of dogs (unleashed):</string>
+	<string name="numberOfEquestrians">Number of equestrians:</string>
+	<string name="numberOfAnglers">Number of anglers:</string>
+	<string name="trailUsersSeen">Trail Users Seen</string>
+
+	<string name="emptyReviewsList">No reviews available.</string>
+
+
+	<!-- Reviews -->
+	<string name="numReviewsLabel">Reviews</string>
+
+	<!-- Area -->
+	<string name="area">Area</string>
+	<string name="addAreaContent">What to you want to add?</string>
+	<string name="reviewHint">Enter review here...</string>
+	<string name="owner:">Owner:</string>
+	<string name="trails:">Trails:</string>
+	<string name="descriptionTitle">Description</string>
+	<string name="directionsTitle">Directions</string>
+	
+	
+
+</resources>

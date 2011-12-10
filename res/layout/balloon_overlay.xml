@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	android:orientation="vertical" android:paddingBottom="35dip"
+	android:minWidth="200dip" android:id="@+id/balloon_main_layout"
+	android:background="@drawable/balloon_overlay_bg_selector"
+	android:paddingTop="0dip" android:paddingRight="0dip"
+	android:paddingLeft="10dip">
+
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:paddingBottom="10dip">
+
+		<LinearLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:orientation="vertical"
+			android:layout_weight="1" android:paddingTop="10dip"
+			android:id="@+id/balloon_inner_layout">
+			<TextView android:layout_height="wrap_content"
+				android:layout_width="fill_parent" android:id="@+id/balloon_item_title"
+				android:text="Trail Name" android:textSize="16dip"
+				android:textStyle="bold" android:textColor="@android:color/white" />
+			<TextView android:layout_height="wrap_content"
+				android:layout_width="fill_parent" android:id="@+id/balloon_item_snippet"
+				android:text="balloon_item_snippet" android:textColor="@android:color/white"
+				android:textSize="12dip" />
+		</LinearLayout>
+
+		<ImageView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:src="@drawable/balloon_overlay_close"
+			android:id="@+id/close_img_button" android:paddingLeft="10dip"
+			android:paddingBottom="10dip" android:paddingRight="8dip"
+			android:paddingTop="8dip" />
+	</LinearLayout>
+	
+	<LinearLayout android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:orientation="horizontal">
+		<ImageButton android:layout_height="30dp"
+			android:layout_width="30dp" android:src="@drawable/condition_good"
+			android:id="@+id/imageButton1" />
+		<ImageButton android:layout_height="30dp"
+			android:layout_width="30dp" android:src="@drawable/condition_good"
+			android:id="@+id/imageButton1" />
+	</LinearLayout>
+
+</LinearLayout>

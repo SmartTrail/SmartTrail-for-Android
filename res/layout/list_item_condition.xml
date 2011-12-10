@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" android:layout_width="fill_parent"
+	android:orientation="vertical" >
+
+	<LinearLayout android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:orientation="horizontal" 
+		android:layout_marginTop="10dp"  android:layout_marginLeft="10dp"  android:layout_marginRight="10dp">
+
+		<ImageView android:id="@+id/condition" android:src="@drawable/speaker_image_empty"
+			
+			android:layout_marginRight="5dip" android:layout_height="40dp"
+			android:layout_width="40dp" />
+
+		<LinearLayout android:layout_weight="2"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true" android:layout_width="fill_parent"
+			android:orientation="vertical">
+
+			<TextView android:id="@+id/name" android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:text="Name"
+				style="@style/ReviewUsernameText" />
+				
+	<!-- 		<TextView android:id="@+id/numObservations" android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:text="33 Observations"
+				style="@style/NumReviewsText" /> -->
+
+		</LinearLayout>
+
+		<LinearLayout 
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:orientation="vertical" >
+
+			<TextView android:id="@+id/time" android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:text="on 06/15/2011"
+				style="@style/ConditionTimeText" />
+			/>
+		</LinearLayout>
+
+	</LinearLayout>
+
+
+	<TextView android:id="@+id/comment" android:layout_height="wrap_content"
+		android:layout_width="match_parent" android:layout_marginTop="5dp" android:layout_marginLeft="15dp"
+		android:layout_marginRight="10dp" android:layout_marginBottom="10dp" android:text="Trails are awesome."
+		style="@style/ReviewText" android:maxLines="2" android:ellipsize="marquee"/>
+
+</LinearLayout>
+<!-- <RelativeLayout android:layout_width="wrap_content"
+	android:minHeight="50dp" android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:padding="10dip">
+
+
+	<TextView android:id="@+id/condition" android:text="GOOD"
+		android:gravity="center" android:layout_centerVertical="true"
+		android:layout_alignParentLeft="true" android:layout_height="50dp"
+		android:layout_width="55dp" style="@style/ConditionState" />
+
+	<QuickContactBadge android:id="@+id/quickContactBadge"
+		android:layout_centerVertical="true" android:layout_toRightOf="@id/condition"
+		android:layout_height="50dp" android:layout_width="50dp"
+		android:scaleType="fitXY" android:visibility="gone" />
+
+	<LinearLayout android:layout_marginLeft="10dip"
+		android:layout_height="wrap_content" android:layout_centerVertical="true"
+		android:layout_width="fill_parent" android:layout_toRightOf="@id/quickContactBadge"
+		android:orientation="vertical">
+
+		<RelativeLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<TextView android:id="@+id/name"
+				android:layout_alignParentLeft="true" android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:text="Name"
+				style="@style/ConditionNickText" />
+
+			<TextView android:id="@+id/time"
+				android:layout_alignParentRight="true" android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:text="2 hours ago"
+				style="@style/ConditionTimeText" />
+			/>
+		</RelativeLayout>
+		<TextView android:id="@+id/comment" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:text="Trails are awesome."
+			style="@style/ConditionMessageText" />
+
+	</LinearLayout>
+
+
+
+</RelativeLayout> -->

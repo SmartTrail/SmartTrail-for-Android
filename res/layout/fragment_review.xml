@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:id="@+id/ScrollView01"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent">
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content" android:layout_width="fill_parent"
+	android:orientation="vertical" >
+
+	<LinearLayout android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:orientation="horizontal" 
+		android:layout_marginTop="10dp"  android:layout_marginLeft="10dp"  android:layout_marginRight="10dp">
+
+		<ImageView android:id="@+id/photo" android:src="@drawable/speaker_image_empty"
+			
+			android:layout_marginRight="5dip" android:layout_height="75dp"
+			android:layout_width="75dp" />
+
+		<LinearLayout android:layout_weight="2"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true" android:layout_width="fill_parent"
+			android:orientation="vertical">
+
+			<TextView android:id="@+id/name" android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:text="Name"
+				style="@style/ReviewUsernameText" />
+				
+			<TextView android:id="@+id/numReviews" android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:text="33 reviews"
+				style="@style/NumReviewsText" />
+
+		</LinearLayout>
+
+		<LinearLayout 
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:orientation="vertical" >
+
+			<RatingBar android:id="@+id/rating" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:gravity="center_vertical"
+				 style="@style/reviewBarStyleSmall" />
+
+			<TextView android:id="@+id/date" android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:text="on 06/15/2011"
+				style="@style/ConditionTimeText" />
+			/>
+		</LinearLayout>
+
+	</LinearLayout>
+
+
+	<TextView android:id="@+id/review" android:layout_height="wrap_content"
+		android:layout_width="match_parent" android:layout_marginTop="5dp" android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp" android:layout_marginBottom="10dp" android:text="Trails are awesome."
+		style="@style/ReviewText" />
+
+</LinearLayout>
+
+
+</ScrollView>
+
+
+
+
+
+

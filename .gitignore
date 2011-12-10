@@ -1,0 +1,20 @@
+# use glob syntax.
+syntax: glob
+
+*.class
+bin/*
+gen/*
+**/.DS_Store
+
+local.properties
+
+#templated files
+
+#working jars
+proguard/optimized.jar
+proguard/unoptimized.jar
+proguard/class_files.txt
+proguard/unused.txt
+proguard/mapping.txt
+proguard/seeds.txt
+
